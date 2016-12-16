@@ -1,0 +1,37 @@
+<!--
+  Generated template for the UserRole page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content padding class="user-role">
+	
+	<div class="Wrapper--vtop">
+
+		<div class="Header mb">
+		    <span>
+		      <img src="assets/img/manytutors.png">
+		    </span>
+		</div>
+
+		<button ion-button class = "mb--sm" block color="danger" large (click) = "changeRole('student')">
+			I'm a student
+		</button>
+
+		<button ion-button block color="danger" large outline (click) = "changeRole('tutor')">
+			I'm a tutor
+		</button>
+
+	</div> 
+
+</ion-content>
+
+<ion-footer class="user-role-footer">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <img src="assets/img/singaporean-flag-large.png"/>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

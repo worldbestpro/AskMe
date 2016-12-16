@@ -1,0 +1,63 @@
+<!--
+  Generated template for the Answer page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>ManyTutors</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="answer">
+
+  <ion-card class = "Card">
+    <!--<img [src]="answer.full_image"/>-->
+	<div class="Card__image" (click)="viewImage()">
+		<img [src]="answer.full_image"/>
+
+		<div class="Card__label">
+			<div class = "Card__label-text">SOLUTION</div>
+		</div>
+	</div>
+
+    <ion-item class = "buffer--v-sm">
+		<ion-avatar item-left>
+			<img [src]="answer.user.profile_pic">
+		</ion-avatar>
+
+		<h2>{{answer.user.name}}</h2>
+		<div class="Card__meta">
+			<span>{{answer.formatted_created_at}}</span>
+		</div>
+    </ion-item>
+
+    <ion-card-content>
+		<p class = "Card__content">
+			{{answer.description}}
+		</p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<ion-footer class="answer-footer">
+	<ion-grid>
+		<ion-row>
+
+			<ion-col>
+				<button ion-button (click)="openQuestion()">
+					View Question
+				</button>
+			</ion-col>
+
+			<ion-col>
+				<button ion-button class="complete" (click)="completeQuestion()">
+					Complete
+				</button>
+			</ion-col>
+
+		</ion-row>
+	</ion-grid>
+</ion-footer>

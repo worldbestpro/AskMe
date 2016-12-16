@@ -1,0 +1,59 @@
+<!--
+  Generated template for the AnswerQuestion page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>ManyTutors</ion-title>
+    <ion-buttons end color="dark">
+      <button ion-button (click)="settings()">
+        <img src="assets/img/settings.png"/>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="answer-question">
+  <ion-card>
+    <ion-card>
+        <p *ngIf="!answer.image" (click)="takepic()"><span>Click here to take a photo</span></p>
+        <span class="captured-image" *ngIf="answer.image">
+          <img class="cross" (click)="clearImage()" src="assets/img/closeme.png"/>
+          <!--<img class="picture" [src]="answer.image"/>-->
+          <div class="frame" (click)="viewImage()">
+            <img [src]="answer.image"/>
+          </div>
+        </span>
+    </ion-card>
+
+    <ion-list class = "bg-white">
+
+      <ion-card class="description" (click)="openDescription()">
+        <ion-card-content>
+          <span class="desc" *ngIf="answer.description">{{answer.description}}</span>
+          <span class="placeholder" *ngIf="!answer.description">Comment on your answer.</span>
+        </ion-card-content>
+      </ion-card>
+
+    <!--<div class="description">
+    	<button ion-button (click)="openDescription()" class = "Textarea">
+	    	<span class="desc" *ngIf="answer.description">{{answer.description}}</span>
+	    	<span class="placeholder" *ngIf="!answer.description">Comment on your answer.</span>
+    	</button>
+    </div>-->
+
+      <ion-item *ngIf="facebookEnable">
+        <ion-label>Facebook</ion-label>
+        <ion-toggle secondary [checked]="answer.share_facebook" [(ngModel)]="answer.share_facebook"></ion-toggle>
+      </ion-item>
+  </ion-list>
+  </ion-card>
+
+</ion-content>
+
+<ion-footer class="answer-footer">
+  <button ion-button block color="danger" large [disabled]="!isAnswerValid()" *ngIf="!submitting" (click)="submitAnswer()">Submit</button>
+  <button ion-button block color="dark" large disabled *ngIf="submitting">Submitting...</button>
+</ion-footer>

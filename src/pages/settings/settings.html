@@ -1,0 +1,53 @@
+<!--
+  Generated template for the Settings page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>ManyTutors</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="settings">
+
+	<div class="Wrapper-vtop">
+
+		<div class = "Header">
+			<span class="Header__text">
+				Login to ask a question.
+			</span>
+		</div>
+
+		<div class = "mb--md">
+			<button ion-button class = "mb--xs" color="facebook" md large block (click)="loginWithFacebook2()">
+				<ion-icon name="logo-facebook"></ion-icon>
+				Facebook
+			</button>
+		</div>
+
+		<div>
+			<button ion-button large block clor="grey" md (click)="emailLogin()">
+				Email Login
+			</button>
+		</div>
+
+	  <!--<br><br>
+	  <button ion-button block outline *ngIf="role=='tutor'" (click)="changeRole('student')">Switch to Student</button>
+	  <button ion-button block outline *ngIf="role=='student'" (click)="changeRole('tutor')">Switch to Tutor</button>-->
+	</div>
+
+</ion-content>
+
+<ion-footer class="settings-footer">
+	<ion-grid>
+		<ion-row>
+			<ion-col>
+				<div class = "text--small text--center text--muted">
+					By signing up, you agree to our terms and conditions.
+				</div>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-footer>

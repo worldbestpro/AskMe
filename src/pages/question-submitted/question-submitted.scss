@@ -1,0 +1,170 @@
+page-question-submitted {
+    .Question-Spinner {
+        position: relative;
+        margin-top: 120px;
+    }
+
+    .question-submitted {
+        background: #cc3031;
+        color: white;
+        
+        .Header {
+            padding-top: 30px;
+        }
+
+        ol {
+            padding-top: 43%;
+            font-size: 14px;
+        }
+
+        .cover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            z-index: 1;
+            filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+            opacity: 1;
+        }
+
+        .cover.off {
+            filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+            opacity: 0;
+            -moz-transition: 5000ms;
+            -o-transition: 5000ms;
+            -webkit-transition: 5000ms;
+            transition: 5000ms;
+        }
+
+        .progress {
+            position: absolute;
+            top: 42%;
+            left: 50%;
+            padding: 0;
+            margin: 0;
+            font-family: 'Black Ops One', cursive;
+            font-size: 25px;
+            font-size: 6vmin;
+            color: #DDD;
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .ring {
+            position: absolute;
+            top: 42%;
+            left: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            width: 20vmin;
+            height: 20vmin;
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            background: #ce494a;
+        }
+
+        .ring:nth-child(0) {
+            -moz-animation: ripple 5000ms linear 0ms infinite;
+            -webkit-animation: ripple 5000ms linear 0ms infinite;
+        }
+
+        .ring:nth-child(1) {
+            -moz-animation: ripple 5000ms linear 1000ms infinite;
+            -webkit-animation: ripple 5000ms linear 1000ms infinite;
+        }
+
+        .ring:nth-child(2) {
+            -moz-animation: ripple 5000ms linear 2000ms infinite;
+            -webkit-animation: ripple 5000ms linear 2000ms infinite;
+        }
+
+        .ring:nth-child(3) {
+            -moz-animation: ripple 5000ms linear 3000ms infinite;
+            -webkit-animation: ripple 5000ms linear 3000ms infinite;
+        }
+
+        .ring:nth-child(4) {
+            -moz-animation: ripple 5000ms linear 4000ms infinite;
+            -webkit-animation: ripple 5000ms linear 4000ms infinite;
+        }
+
+        .ring:nth-child(5) {
+            -moz-animation: ripple 5000ms linear 5000ms infinite;
+            -webkit-animation: ripple 5000ms linear 5000ms infinite;
+        }
+
+    @-moz-keyframes ripple {
+        0% {
+        width: 20vmin;
+        height: 20vmin;
+        border-color: rgba(255, 255, 255, 0);
+        }
+        20% {
+        width: 40vmin;
+        height: 40vmin;
+        border-color: rgba(255, 255, 255, 0.8);
+        }
+        40% {
+        width: 50vmin;
+        height: 50vmin;
+        border-color: rgba(255, 255, 255, 0.6);
+        }
+        60% {
+        width: 60vmin;
+        height: 60vmin;
+        border-color: rgba(255, 255, 255, 0.4);
+        }
+        80% {
+        width: 70vmin;
+        height: 70vmin;
+        border-color: rgba(255, 255, 255, 0.2);
+        }
+        100% {
+        width: 80vmin;
+        height: 80vmin;
+        border-color: rgba(255, 255, 255, 0);
+        }
+    }
+    @-webkit-keyframes ripple {
+        0% {
+        width: 20vmin;
+        height: 20vmin;
+        border-color: rgba(255, 255, 255, 0);
+        }
+        20% {
+        width: 30vmin;
+        height: 30vmin;
+        border-color: rgba(255, 255, 255, 0.8);
+        }
+        40% {
+        width: 40vmin;
+        height: 40vmin;
+        border-color: rgba(255, 255, 255, 0.6);
+        }
+        60% {
+        width: 50vmin;
+        height: 50vmin;
+        border-color: rgba(255, 255, 255, 0.4);
+        }
+        80% {
+        width: 60vmin;
+        height: 60vmin;
+        border-color: rgba(255, 255, 255, 0.2);
+        }
+        100% {
+        width: 70vmin;
+        height: 70vmin;
+        border-color: rgba(255, 255, 255, 0);
+        }
+    }
+    }
+
+}

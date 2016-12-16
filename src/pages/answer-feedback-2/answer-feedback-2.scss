@@ -1,0 +1,59 @@
+page-answer-feedback-2 {
+    .answer-feedback-2 {
+
+        ion-item {
+            padding: 0;
+            margin: 0;
+        }
+
+        .item-inner {
+            padding: 0;
+            margin: 0;
+        }
+
+        ion-textarea {
+            background-color: #FFF;
+            height: 85vw;
+            margin: 0;
+
+                textarea {
+                    @extend .buffer--sm;
+                    border: none;
+                }
+        }
+
+        p{
+        text-align: center;
+        padding-top: 25px;
+        padding-bottom: 30px;
+
+        .question{
+            display:block;
+            padding-bottom: 60px;
+        }
+        ion-icon {
+            font-size: 90px;
+            text-align: center;
+            padding: 15px 30px 15px 30px;
+            border-radius: 75px;
+            font-weight: bold;
+            color:#e8e8e8;
+            background:white;
+        }
+
+        span{
+            font-size: 30px;
+        }
+        }
+
+    .placeholder {
+        color: grey;
+    }
+    .comment {
+        width:100%;
+        margin:0px;
+        min-height: 200px;
+    }
+    }
+
+}

@@ -1,0 +1,39 @@
+page-answer-feedback {
+    .Vote {
+        &__action {
+            margin: 0 20px;
+            height: 99px;
+
+            .button-inner {
+                height: 99px;
+            }
+        }
+    }
+
+    // .answer-feedback {
+    //     p{
+    //       text-align: center;
+    //       padding-top: 25px;
+    //       padding-bottom: 30px;
+
+    //       .question {
+    //         display:block;
+    //         padding-bottom: 60px;
+    //       }
+
+    //       ion-icon {
+    //         font-size: 90px;
+    //         text-align: center;
+    //         padding: 15px 30px 15px 30px;
+    //         border-radius: 75px;
+    //         font-weight: bold;
+    //         color:#e8e8e8;
+    //       }
+
+    //       span{
+    //         font-size: 30px;
+    //       }
+    //     }
+    // }
+
+}

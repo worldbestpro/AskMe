@@ -1,0 +1,56 @@
+page-question-view {
+    .question-view {
+        ion-card{
+            margin:0px;
+            width: 100%;
+            height:100%;
+            .frame {
+            width: 100%;
+            height: 250px;
+            text-align: center;
+            overflow: hidden;
+            img {
+                position: relative;
+                top: 50%;
+                transform: translate(0,-50%)
+            }
+            }
+            /*img{
+            height: 250px;
+            }*/
+            .card-subtitle {
+
+            position: absolute;
+            text-align: right;
+            top: 206px;
+            width: 100%;
+            padding-right:15px;
+
+            div{
+                font-size: 1.0em;
+                color: black;
+                background: white;
+                float:right;
+                border-radius: 20px;
+                padding: 5px;
+                color: dodgerblue;
+                border: 1px;
+                border-style: solid;
+            }
+            }
+            .tags{
+            span{
+                color: grey;
+                font-weight: bold;
+            }
+            }
+        }
+        }
+
+        .answer-footer{
+        .view {
+            color:red;
+        }
+    }
+
+}

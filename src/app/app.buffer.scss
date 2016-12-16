@@ -1,0 +1,111 @@
+// Buffer Styles
+$spacing-xs: 5px;
+$spacing-sm: 15px;
+$spacing-md: 30px;
+$spacing-lg: 50px;
+
+.mb--xs {
+	margin-bottom: $spacing-xs;
+}
+
+.mb--sm {
+	margin-bottom: $spacing-sm;
+}
+
+.mb--md {
+	margin-bottom: $spacing-md;
+}
+
+.mb {
+	margin-bottom: $spacing-lg;
+}
+
+.buffer {
+	padding: $spacing-lg;
+}
+
+.buffer--sm {
+	padding: $spacing-sm;
+}
+
+.buffer--md {
+	padding: $spacing-md;
+}
+
+.buffer--xs {
+	padding: $spacing-xs;
+}
+
+.buffer--v {
+	padding-top: $spacing-lg;
+	padding-bottom: $spacing-lg;
+}
+
+.buffer--v-sm {
+	padding-top: $spacing-sm;
+	padding-bottom: $spacing-sm;
+}
+
+.buffer--v-md {
+	padding-top: $spacing-md;
+	padding-bottom: $spacing-md;
+}
+
+.buffer--h {
+	padding-right: $spacing-lg;
+	padding-left: $spacing-lg;
+}
+
+.buffer--h-sm {
+	padding-right: $spacing-sm;
+	padding-left: $spacing-sm;
+}
+
+.buffer--h-md {
+	padding-right: $spacing-md;
+	padding-left: $spacing-md;
+}
+
+.buffer--u {
+	padding: $spacing-lg;
+	padding-top: 0;
+}
+
+.buffer--u-sm {
+	padding: $spacing-sm;
+	padding-top: 0;
+}
+
+.buffer--u-md {
+	padding: $spacing-md;
+	padding-top: 0;
+}
+
+.buffer--n {
+	padding: $spacing-lg;
+	padding-bottom: 0;
+}
+
+.buffer--n-sm {
+	padding: $spacing-sm;
+	padding-bottom: 0;
+}
+
+.buffer--n-md {
+	padding: $spacing-md;
+	padding-bottom: 0;
+}
+
+.buffer--t-sm {
+	padding-top: $spacing-sm;
+}
+
+.buffer--t-md {
+	padding-top: $spacing-md;
+}
+
+.buffer--t-lg {
+	padding-top: $spacing-lg;
+}
+
+// End of Buffer Styles

@@ -1,0 +1,48 @@
+page-answer {
+	.answer {
+		ion-card{
+			margin:0px;
+			width: 100%;
+			height: 100%;
+		/* img{
+				height: 250px;
+			}*/
+
+		}
+	}
+
+	.answer-footer{
+		ion-grid {
+			background: white;
+			padding: 0px !important;
+
+			ion-col {
+				padding: 0;
+				color: #c93939;
+				text-align: center;
+				font-size: 2rem;
+				font-weight: 600;
+				border-top: 1px solid #cfcfcf;
+				height: 75px;
+				
+				.button {
+					padding: 15px 5px 15px 5px;
+					height: 100%;
+					width: 100%;
+					border-radius: 0;
+					background-color: #FFF;
+					color: #c93939;
+					font-size: 20px;
+
+					&.complete {
+						background: #c93939;
+						color:white;
+						border:0px;
+					}
+
+				}
+
+			}
+		}
+	}
+}

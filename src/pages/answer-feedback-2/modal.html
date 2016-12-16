@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="assignComment()">Done</button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-textarea textarea-focuser rows="17" [(ngModel)]="comment" placeholder="Tell us why the answer is unsatisfactory."></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

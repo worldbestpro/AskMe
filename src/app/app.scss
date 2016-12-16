@@ -1,0 +1,265 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+@import "./app.buffer";
+
+@import "./app.custom-elements";
+
+body {
+  font-family: "Open Sans", "Helvetica Neue", "Roboto";
+  font-weight: 300;
+}
+
+.placeholder {
+	color: #b5b5b5;
+}
+
+.toolbar-content {
+
+	ion-title {
+
+		.toolbar-title{
+			white-space: inherit;
+
+			button{
+				float: right;
+			}
+			
+			ion-icon.right {
+				float: right;
+			}
+		}
+
+	}
+}
+
+.green {
+  color: green !important;
+}
+
+.red {
+  color: #c93939 !important;
+}
+
+.toolbar-content {
+	text-align: center;
+
+		.toolbar-title{
+			font-weight: bold;
+		}
+
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../assets/fonts/OpenSansRegular.eot');
+    src: url('../../assets/fonts/OpenSansRegular.eot') format('embedded-opentype'),
+         url('../../assets/fonts/OpenSansRegular.woff2') format('woff2'),
+         url('../../assets/fonts/OpenSansRegular.woff') format('woff'),
+         url('../../assets/fonts/OpenSansRegular.ttf') format('truetype'),
+         url('../../assets/fonts/OpenSansRegular.svg#OpenSansRegular') format('svg');
+	font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../assets/fonts/OpenSansSemibold.eot');
+    src: url('../../assets/fonts/OpenSansSemibold.eot') format('embedded-opentype'),
+         url('../../assets/fonts/OpenSansSemibold.woff2') format('woff2'),
+         url('../../assets/fonts/OpenSansSemibold.woff') format('woff'),
+         url('../../assets/fonts/OpenSansSemibold.ttf') format('truetype'),
+         url('../../assets/fonts/OpenSansSemibold.svg#OpenSansSemibold') format('svg');
+	font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../assets/fonts/OpenSansLight.eot');
+    src: url('../../assets/fonts/OpenSansLight.eot') format('embedded-opentype'),
+         url('../../assets/fonts/OpenSansLight.woff2') format('woff2'),
+         url('../../assets/fonts/OpenSansLight.woff') format('woff'),
+         url('../../assets/fonts/OpenSansLight.ttf') format('truetype'),
+         url('../../assets/fonts/OpenSansLight.svg#OpenSansLight') format('svg');
+	font-weight: 100;
+}
+
+.button {
+  font-weight: 600;
+  text-transform: inherit !important;
+}
+
+.button-reset {
+	padding: 0;
+	margin: 0;
+	border: none;
+	box-shadow: none;
+	background-color: transparent;
+
+	&:hover:not(.disable-hover) {
+		padding: 0;
+		margin: 0;
+		border: none;
+		box-shadow: none;
+		background-color: transparent;
+	}
+
+	&.activated {
+		padding: 0;
+		margin: 0;
+		border: none;
+		box-shadow: none;
+		background-color: transparent;
+	}
+}
+
+.button-md {
+	& .button-inner {
+		font-size: 2.2rem;
+	}
+}
+
+.button-danger {
+  background-color: #c93939;
+}
+
+.button-medium {
+	height: 3.2em;
+}
+
+.button-danger.activated {
+	color: #FFF;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #a42f2f;
+	background-color: #a42f2f;
+}
+
+.button-outline-danger{
+  border-color: #c93939;
+  color: #c93939;
+}
+
+.button-outline-danger.activated{
+  color: #ff4747;
+  background-color: transparent;
+}
+
+ion-footer {
+  ion-grid{
+    .button{
+      margin: 0px;
+      border-radius:4px;
+    }
+  }
+  .button {
+    margin: 0px;
+    border-radius:0px;
+  }
+}
+
+// Modified by Jason
+
+ // Wrapper
+.Wrapper--vcenter {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.Wrapper--vtop {
+	display: flex;
+	flex-direction: column;
+	justify-content: top;
+}
+
+.Wrapper--hcenter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+// End of Wrapper
+
+.bg-white {
+	background-color: #FFF;
+}
+
+// Text style
+.text--small {
+	font-size: 12px;
+}
+
+.text--center {
+	text-align: center;
+}
+
+.text--muted {
+	color: #585858;
+}
+
+ion-card.Card {
+	background-color: #FFF;
+	
+	ion-item {
+		background-color: #FFF;
+	}
+}
+
+ion-content.bg-white {
+	ion-item {
+		background-color: #FFF;
+	}
+}
+
+ion-list.bg-white {
+	ion-card, ion-item {
+		background-color: #FFF;
+	}
+}
+
+.button {
+	border-radius: 5px;
+	box-shadow: none;
+}
+
+.button-large {
+  font-weight: 600;
+  font-size: 2.6rem;
+}
+
+.button-outline-danger.activated {
+	color: #9c2323;
+	border: 1px solid #9c2323;
+}
+
+// Common Header Style
+.Header {
+	text-align: center;
+	padding-top: 60px;
+	padding-bottom: 60px;
+
+	&__text {
+		font-weight: 100;
+		font-size: 28px;
+
+		&--sm {
+			font-size: 20px;
+			font-weight: 100;
+		}
+	}
+}

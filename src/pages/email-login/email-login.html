@@ -1,0 +1,42 @@
+<!--
+  Generated template for the EmailLogin page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>ManyTutors</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="email-login">
+	
+	<div class="Wrapper-vtop">
+		<div class="Header">
+		    <div class="Header__text">Email Login</div>
+		</div>
+	</div>
+
+	<ion-list class = "bg-white">
+
+	  <ion-item>
+	    <ion-label floating>Email</ion-label>
+	    <ion-input type="text" [(ngModel)]="email"></ion-input>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-label floating>Password</ion-label>
+	    <ion-input type="password" [(ngModel)]="password"></ion-input>
+	  </ion-item>
+
+	</ion-list>
+
+	<div padding>
+		<div class="mb--sm">
+			<button ion-button block large (click)="loginEmail()">Log In</button>
+		</div>
+		<button ion-button block color="grey" (click)="createEmail()">Create an account</button>
+	</div>
+
+</ion-content>

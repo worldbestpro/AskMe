@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Description</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="assignDescription()">Done</button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class = "bg-white">
+
+	<ion-item>
+		<ion-textarea
+			rows="17" textarea-focuser
+			[(ngModel)]="description"
+			placeholder="Comment on your answer"
+		></ion-textarea>
+	</ion-item>
+
+</ion-content>

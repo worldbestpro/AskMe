@@ -1,0 +1,30 @@
+<!--
+  Generated template for the AnswerFeedback2 page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>ManyTutors</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="answer-feedback-2">
+
+  <p>
+    <span>
+      <img src="assets/img/no.PNG"/>
+      <br>
+    </span>
+    <span>Why not?</span>
+  </p>
+  <ion-item>
+    <ion-textarea rows="6" placeholder="Tell us why the answer is unsatisfactory." [(ngModel)]="answerVote.comment"></ion-textarea>
+  </ion-item>
+
+</ion-content>
+
+<ion-footer>
+  <button ion-button block color="danger" large *ngIf="isDataValid()" (click)="voteAnswer()">Done</button>
+</ion-footer>

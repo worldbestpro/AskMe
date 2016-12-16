@@ -1,0 +1,54 @@
+<!--
+  Generated template for the QuestionSubmitted page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button color="dark" (click)="cancelQuestion()">
+        Cancel
+      </button>
+    </ion-buttons>
+    <ion-title></ion-title>
+    <ion-buttons end color="dark">
+      <button ion-button (click)="settings()">
+        <img src="assets/img/settings.png"/>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="question-submitted">
+	
+	<div class="Wrapper--vtop">
+		
+		<div class = "Header">
+			<span class="Header__text">
+				Question Submitted<br>Successfully 
+			</span>
+		</div>
+
+		<div class = "Question-Spinner">
+			<div class="ring first"></div>
+			<div class="ring second"></div>
+			<div class="ring third"></div>
+			<div class="ring fourth"></div>
+			<div class="ring fith"></div>
+			<h2 class="progress">
+				<img src="assets/img/place.png"/>
+			</h2>
+			<div class="cover off"></div>
+		</div>
+
+		<div>
+			<ol>
+				<li>A real tutor will be answering your question.</li>
+				<li>Give us a few hours. You can exit this app.</li>
+				<li>You will receive push notification when<br> the answer has arrived.</li>
+			</ol>
+		</div>
+		
+	</div>
+</ion-content>

@@ -1,0 +1,44 @@
+<!--
+  Generated template for the Feedback page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>ManyTutors</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="feedback">
+
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Name</ion-label>
+      <ion-input type="text" [(ngModel)]="feedback.name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Email</ion-label>
+      <ion-input type="text" [(ngModel)]="feedback.email" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Subject</ion-label>
+      <ion-input type="text" [(ngModel)]="feedback.subject" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Content</ion-label>
+      <ion-textarea rows="10" [(ngModel)]="feedback.content"></ion-textarea>
+    </ion-item>
+
+  </ion-list>
+
+
+</ion-content>
+
+<ion-footer>
+  <button ion-button block medium color="danger" [disabled]="!isFeedbackValid()" *ngIf="!submitting" (click)="submitFeedback()">Submit</button>
+  <button ion-button block medium color="dark" disabled *ngIf="submitting">Submitting...</button>
+</ion-footer>

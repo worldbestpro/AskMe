@@ -1,0 +1,18 @@
+page-answer-arrived {
+  .answer-arrived {
+    .Avatar {
+      &--md {
+        img {
+          height: 100px;
+          width: 100px;
+          border-radius: 100px;
+        }
+      }
+
+      &__name {
+        font-weight: 600;
+        font-size: 16px;
+      }
+    }
+  }
+}

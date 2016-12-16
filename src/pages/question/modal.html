@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title *ngIf="type=='level'">Level</ion-title>
+    <ion-title *ngIf="type=='subject'">Subject</ion-title>
+    <ion-title *ngIf="type=='description'">Description</ion-title>
+    <ion-buttons end *ngIf="type=='description'">
+      <button ion-button (click)="assignDescription()">Done</button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class = "bg-white">
+
+  <ion-list radio-group [(ngModel)]="level" *ngIf="type=='level'">
+    <ion-item-divider light></ion-item-divider>
+    <ion-item *ngFor="let lvl of levelSubjectList.primaryLevels">
+      <ion-label>{{lvl.name}}</ion-label>
+      <ion-radio [checked]="lvl.name===level" value="{{lvl.name}}" (click)="assignLevel(lvl.name)"></ion-radio>
+    </ion-item>
+    <ion-item-divider light></ion-item-divider>
+    <ion-item *ngFor="let lvl of levelSubjectList.secondaryLevels">
+      <ion-label>{{lvl.name}}</ion-label>
+      <ion-radio [checked]="lvl.name===level" value="{{lvl.name}}" (click)="assignLevel(lvl.name)"></ion-radio>
+    </ion-item>
+    <ion-item-divider light></ion-item-divider>
+    <ion-item *ngFor="let lvl of levelSubjectList.collegeLevels">
+      <ion-label>{{lvl.name}}</ion-label>
+      <ion-radio [checked]="lvl.name===level" value="{{lvl.name}}" (click)="assignLevel(lvl.name)"></ion-radio>
+    </ion-item>
+    <ion-item-divider light></ion-item-divider>
+    <ion-item *ngFor="let lvl of levelSubjectList.internationalLevels">
+      <ion-label>{{lvl.name}} (Beta)</ion-label>
+      <ion-radio [checked]="lvl.name===level" value="{{lvl.name}}" (click)="assignLevel(lvl.name)"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+  <ion-list radio-group [(ngModel)]="subject" *ngIf="type=='subject'">
+    <ion-item-divider light (click)="assignSubject('')"><span *ngIf="subjects.length==0">Please select Level first!!</span></ion-item-divider>
+    <ion-item *ngFor="let sub of subjects">
+      <ion-label>{{sub}}</ion-label>
+      <ion-radio [checked]="sub===subject" value="{{sub}}" (click)="assignSubject(sub)"></ion-radio>
+    </ion-item>
+
+  </ion-list>
+
+	<ion-item *ngIf="type=='description'">
+		<ion-textarea
+			rows="17" textarea-focuser
+			[(ngModel)]="description"
+			placeholder="Describe your question."
+		></ion-textarea>
+	</ion-item>
+
+</ion-content>

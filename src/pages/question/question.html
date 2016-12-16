@@ -1,0 +1,91 @@
+<!--
+  Generated template for the Question page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Ask a Question</ion-title>
+    <ion-buttons end color="dark">
+      <button ion-button (click)="settings()">
+        <img src="assets/img/settings.png"/>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar *ngIf="editLevel || editSubject || editDesc">
+    <ion-buttons end *ngIf="editDesc" color="dark">
+      <button ion-button (click)="closeDesc()">
+        Done
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="question-page">
+
+<ion-card *ngIf="!editLevel && !editSubject && !editDesc">
+	<ion-card>
+		<p *ngIf="!question.image" (click)="takepic()">
+			<span>Click here to take a photo {{question.image}}</span>
+		</p>
+
+		<span class="captured-image" *ngIf="question.image">
+			<img class="cross" (click)="clearImage()" src="assets/img/closeme.png" />
+			<!--<img class="picture" [src]="question.image"/>-->
+			<div class="frame" (click)="viewImage()">
+				<img [src]="question.image"/>
+			</div>
+		</span>
+	</ion-card>
+
+    <ion-list class = "bg-white">
+		<div>
+			<button ion-button (click)="openLevelList()" class = "Table-List">
+				<div class = "Table-List__content">
+					<img src="assets/img/sort.png" class = "Table-List__content-icon">
+					<span *ngIf="level">{{level}}</span>
+					<span class="placeholder" *ngIf="!level">Level</span>
+				</div>
+				<div class = "Table-List__icon">
+					<ion-icon name="ios-arrow-forward-outline" item-right></ion-icon>
+				</div>
+			</button>
+		</div>
+
+		<div style = "">
+			<button ion-button (click)="openSubjectList()" class = "Table-List">
+				<div class = "Table-List__content">
+					<img src="assets/img/book95.png" class = "Table-List__content-icon">
+					<span *ngIf="subject">{{subject}}</span>
+					<span class="placeholder" *ngIf="!subject">Subject</span>
+				</div>
+				<div class = "Table-List__icon">
+					<ion-icon name="ios-arrow-forward-outline" item-right></ion-icon>
+				</div>
+			</button>
+		</div>
+
+		<div class="description" style = "margin-top: 2px;">
+			<button ion-button (click)="openDescription()" class = "Textarea">
+				<span class="desc" *ngIf="question.description">{{question.description}}</span>
+				<span class="placeholder" *ngIf="!question.description">
+					Add a brief description to the question.
+				</span>
+			</button>
+		</div>
+
+      <ion-item *ngIf="hasFacebookShare">
+        <ion-label>Share On Facebook</ion-label>
+        <ion-toggle secondary [checked]="question.share_facebook" [(ngModel)]="question.share_facebook"></ion-toggle>
+      </ion-item>
+    </ion-list>
+
+  </ion-card>
+
+</ion-content>
+
+<ion-footer class="question-footer">
+  <button ion-button block medium color="danger" [disabled]="!isQuestionValid()" *ngIf="!submitting" (click)="submitQuestion()">Submit</button>
+  <button ion-button block medium color="dark" disabled *ngIf="submitting">Submitting...</button>
+</ion-footer>

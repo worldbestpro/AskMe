@@ -1,0 +1,120 @@
+// Custom textarea
+.Textarea {
+	height: 100%;
+	width: 100%;
+	background-color: #fff;
+	color: #000;
+	font-weight: 300;
+	font-size: 16px;
+	text-align: left;
+	margin: 0;
+	border-bottom: 1px solid #dedede;
+	@extend .buffer--sm;
+	border-radius: 0;
+	box-shadow: none;
+	min-height: 120px;
+
+	&.activated {
+		background-color: #fff;
+	}
+
+	.button-inner {
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+}
+
+// Custom Table List Style For button
+.Table-List {
+	width: 100%;
+	background-color: #fff;
+	color: #000;
+	font-weight: 300;
+	font-size: 15px;
+	text-align: left;
+	margin: 0;
+	border-bottom: 1px solid #dedede;
+	padding: 1.3em 1em;
+	border-radius: 0;
+	box-shadow: none;
+
+	&.activated {
+		background-color: #dadada;
+	}
+
+	&__content-icon {
+		height: 15px;
+		width: 15px;
+		display: inline;
+		margin-right: 10px;
+		color: #000;
+	}
+
+	.button-inner {
+		justify-content: flex-start;
+	}
+
+	&__content {
+		flex-basis: 95%;
+	}
+
+	&__icon {
+		font-size: 18px;
+		color: #898989;
+
+		ion-icon {
+			font-size: inherit;
+			position: relative;
+			left: auto;
+			top: auto;
+		}
+
+	}
+}
+//  End of Custom Table List 
+
+// Card Style
+.Card {
+
+	&__image {
+		width: 100%;
+		height: 250px;
+		text-align: center;
+		overflow: hidden;
+		position: relative;
+		background-color: #000;
+
+		img {
+			position: relative;
+			top: 50%;
+			transform: translate(0,-50%);
+		}
+
+	}
+
+	&__content {
+		color: #000;
+	}
+
+	&__meta {
+		font-size: 1.3rem
+	}
+
+	&__label {
+		position: absolute;
+		right: 20px;
+		bottom: 20px;
+
+		&-text {
+			font-size: 1.3rem;
+			font-weight: 600;
+			background: white;
+			color: dodgerblue;
+			border: 1px solid dodgerblue;
+			border-radius: 20px;
+			padding: 5px 15px;
+		}
+
+	}
+
+}

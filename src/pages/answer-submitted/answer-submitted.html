@@ -1,0 +1,32 @@
+<!--
+  Generated template for the AnswerSubmitted page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>ManyTutors</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="answer-submitted">
+	
+	<div class="Wrapper-vtop">
+
+		<div class="Header mb">
+			<div class="Header__text mb">
+				Thank You! <br>
+			</div>
+			<div class = "Header__text--sm">
+				{{question.author.name}} has been<br> 
+				notified of your answer.
+			</div>
+		</div>
+	
+		<button ion-button block color="danger" large (click)="solveAnotherQuestion()">Solve another question</button>
+	
+	</div>
+
+
+</ion-content>
